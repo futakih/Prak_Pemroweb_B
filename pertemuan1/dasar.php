@@ -6,7 +6,7 @@
     $double=1.1;
     $array=["pemro","website","kelas B","smt4"]; 
     var_dump($array);
-    penjumlahan -->
+    // penjumlahan
     echo $setring.$setring2;
     // perulangan
     foreach($array as $value) {
