@@ -1,11 +1,15 @@
-<?php
-    require 'Tabung.php';
-    $tabung=new Tabung;
-    if(isset($_POST['button_submit'])){
-        $Tabung->setDiameter($_POST['diameter']);
-        $Tabung->setTinggi($_POSt['tinggi']);
-    }
+<?php 
+require 'Tabung.php';
+$tabung = new Tabung;
+if (isset($_POST['button_submit'])) {
+
+    $tabung-> setDiameter($_POST['diameter']);
+    $tabung-> setTinggi($_POST['tinggi']);
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,16 +19,23 @@
     <title>Document</title>
 </head>
 <body>
+
+</form>
     <form action="" method="POST">
         <label for="">Diameter Alas</label>
         <input type="text" name="diameter"> <br>
         <label for="">Tinggi Tabung</label>
         <input type="text" name="tinggi"> <br><br>
         <button name='button_submit'>Hitung</button>
+
+        <hr>
+
     </form>
-    <hr>
+
+    
     <ul>
-        <li>luas selimut : <?=is_null($tabung)?'Tabung kosong':$tabung->getLuasSelimut();?></li>
+            <li>Luas Sisi : <?php echo $tabung->getLuas(); ?></li>
+            <li>Volume : <?php ?></li>
     </ul>
 </body>
 </html>
